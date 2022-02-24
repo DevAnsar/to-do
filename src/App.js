@@ -1,55 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React from "react";
+import TodosLists from "./components/todos/TodosLists";
+import "./App.css";
+// import {useDispatch} from 'react-redux';
+// import {setFromLocalStoage} from './features/todos/todoSlice';
+// import {useLocalStorage} from './hooks/useLocalStorage';
 
 function App() {
+  // const dispatch=useDispatch();
+  // const [todos]=useLocalStorage("todos",[{id:1,title:"asasdasd"}])
+  // useEffect(()=>{
+  //   dispatch(setFromLocalStoage(todos))
+  // },[]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
+      <header className="App-header bg-gray-200">
+        <TodosLists />
+
+        <div className="text-gray-600 text-sm text-center my-3">
+          make with ❤️ by{" "}
           <a
-            className="App-link"
-            href="https://reactjs.org/"
+            className="text-sky-500 hover:text-sky-700"
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noreferrer"
+            href="https://ansarmirzayi.ir"
           >
-            React
+            DevAnsar
           </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
+        </div>
       </header>
     </div>
   );
